@@ -1,0 +1,18 @@
+Problem Solving
+PyBank
+	(complete) return total months - header
+	(complete) add all values in second column
+	find average change 
+	greatest increase (print whole row)
+	greatest decrease (print whole row
+
+PyPoll
+	(complete) Return total votes
+	cast canidates to list
+	find percentage of votes per canidate
+	total votes per canidate
+	winner based on popular vote
+
+Both
+	Format printing to terminal
+	Writing to external file
