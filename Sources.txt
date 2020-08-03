@@ -1,0 +1,2 @@
+https://www.foxinfotech.in/2018/09/python-read-csv-columns-into-list.html
+# how to read cvs columns into lists
