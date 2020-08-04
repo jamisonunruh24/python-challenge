@@ -8,7 +8,7 @@ PyBank
 
 PyPoll
 	(complete) Return total votes
-	cast canidates to list
+	(complete)cast canidates to list
 	find percentage of votes per canidate
 	total votes per canidate
 	winner based on popular vote

@@ -1,2 +1,5 @@
 https://www.foxinfotech.in/2018/09/python-read-csv-columns-into-list.html
 # how to read cvs columns into lists
+
+https://stackoverflow.com/questions/24441606/how-to-create-a-list-in-python-with-the-unique-values-of-a-csv-file
+# how to us not in to add unique items to list without pulling all entries
