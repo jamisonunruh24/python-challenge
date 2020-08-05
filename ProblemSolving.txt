@@ -2,16 +2,16 @@ Problem Solving
 PyBank
 	(complete) return total months - header
 	(complete) add all values in second column
-	find average change 
+	(complete) find average change 
 	(complete) greatest increase (print whole row)
 	(complete) greatest decrease (print whole row
 
 PyPoll
 	(complete) Return total votes
-	(complete)cast canidates to list
+	(complete) cast canidates to list
 	find percentage of votes per canidate
-	total votes per canidate
-	winner based on popular vote
+	(complete) total votes per canidate
+	(complete) winner based on popular vote
 
 Both
 	Format printing to terminal
