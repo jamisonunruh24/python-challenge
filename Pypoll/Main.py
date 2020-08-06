@@ -9,6 +9,8 @@ canidates = []
 totals = []
 votes = []
 percents = []
+winner = []
+win = 0
 #read csv
 with open(resources_path) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -33,9 +35,29 @@ with open(resources_path) as csv_file:
         percent = "{:.0%}".format(percentage / len(totals))
         percents.append(percent)
 
-        
-          
-print(canidates)    
-print(len(totals))
-print(votes)
-print(percents)
+#print to terminal
+print("Election Results")
+print("-------------------------")
+print(f"Total Votes: " + str(len(totals)))
+print("-------------------------")
+for x in range(len(canidates)):
+    print(f"{canidates[x]}: {percents[x]} ({votes[x]})")
+    if votes[x] > win:
+        win = votes[x]
+        win_can = canidates[x]
+print("-------------------------")
+print(f"Winner: " + win_can)
+print("-------------------------")
+
+#print to analysis
+#write to file
+with open("analysis/PyPollAnalysis.txt", "w") as analysis:
+    analysis.write("Election Results\n")
+    analysis.write("-------------------------\n")
+    analysis.write(f"Total Votes: " + str(len(totals))+ "\n")
+    analysis.write("-------------------------\n")
+    for x in range(len(canidates)):
+        analysis.write(f"{canidates[x]}: {percents[x]} ({votes[x]})\n")
+    analysis.write("-------------------------\n")
+    analysis.write(f"Winner: " + win_can + "\n")
+    analysis.write("-------------------------\n")

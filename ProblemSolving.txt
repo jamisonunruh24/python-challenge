@@ -9,10 +9,10 @@ PyBank
 PyPoll
 	(complete) Return total votes
 	(complete) cast canidates to list
-	find percentage of votes per canidate
+	(complete) find percentage of votes per canidate
 	(complete) total votes per canidate
 	(complete) winner based on popular vote
 
 Both
-	Format printing to terminal
-	Writing to external file
+	(complete) Format printing to terminal
+	(complete) Writing to external file
