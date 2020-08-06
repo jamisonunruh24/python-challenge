@@ -9,7 +9,6 @@ canidates = []
 totals = []
 votes = []
 percents = []
-winner = []
 win = 0
 #read csv
 with open(resources_path) as csv_file:
