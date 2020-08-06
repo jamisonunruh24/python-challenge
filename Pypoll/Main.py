@@ -8,6 +8,7 @@ resources_path = os.path.join("Resources/" + "election_data.csv")
 canidates = []
 totals = []
 votes = []
+percents = []
 #read csv
 with open(resources_path) as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
@@ -27,8 +28,14 @@ with open(resources_path) as csv_file:
             if canidate == vote:
                 tally += 1
         votes.append(tally)
+
+    for percentage in votes:
+        percent = "{:.0%}".format(percentage / len(totals))
+        percents.append(percent)
+
         
           
 print(canidates)    
 print(len(totals))
 print(votes)
+print(percents)
