@@ -31,13 +31,23 @@ with open(resources_path) as csv_file:
         if int(row[1]) < int(decrease):
             decrease = row[1]
             month_decrease = row[0]
-average_change = change / (int(len(months)) - 1)
-print(len(months))
-print(money)
-print(change)
-print(average_change)
-print(increase)
-print(month_increase)
-print(decrease)
-print(month_decrease)
+average_change = "{0:.2f}".format(-(change / (int(len(months)) - 1)))
 
+#print out in terminal
+print("Financial Analysis")
+print("------------------------------")
+print(f"Total months: " +str(len(months)))
+print(f"Total: $" + str(money))
+print(f"Average Change: $" + str(average_change))
+print(f"Greates increase in Profits: " + month_increase + " " + str(increase))
+print(f"Greates decrease in Profits: " + month_decrease + " " + str(decrease))
+
+#write to file
+with open("analysis/PyBankAnalysis.txt", "w") as analysis:
+    analysis.write("Financial Analysis\n")
+    analysis.write("------------------------------\n")
+    analysis.write(f"Total months: " +str(len(months))+"\n")
+    analysis.write(f"Total: $" + str(money)+"\n")
+    analysis.write(f"Average Change: $" + str(average_change)+"\n")
+    analysis.write(f"Greates increase in Profits: " + month_increase + " " + str(increase)+"\n")
+    analysis.write(f"Greates decrease in Profits: " + month_decrease + " " + str(decrease)+"\n")
