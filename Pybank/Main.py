@@ -4,7 +4,7 @@ import os
 
 # create path to file
 resources_path = os.path.join("Resources/" + "budget_data.csv")
-months = 0
+months = []
 money = 0
 prevmoney = 0
 curmoney = 0
@@ -18,7 +18,7 @@ with open(resources_path) as csv_file:
     csv_header = next(csv_file)
 
     for row in csv_reader:
-        months += 1
+        months.append(row[0])
         money = money + int(row[1])
         curmoney = int(row[1])
         if prevmoney != 0:
@@ -31,8 +31,8 @@ with open(resources_path) as csv_file:
         if int(row[1]) < int(decrease):
             decrease = row[1]
             month_decrease = row[0]
-average_change = change / (int(months) - 1)
-print(months)
+average_change = change / (int(len(months)) - 1)
+print(len(months))
 print(money)
 print(change)
 print(average_change)
